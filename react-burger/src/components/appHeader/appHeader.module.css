@@ -5,7 +5,7 @@
 
     grid-template-areas:
     "s1 s2 s3";
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
 
     /*justify-content: space-evenly;*/
@@ -17,21 +17,23 @@
 
 }
 
-.appHeaderSection1{
+.appHeaderSection1 {
     grid-area: s1;
     display: flex;
     justify-content: center;
     grid-gap: 8px;
 
 }
-.appHeaderSection2{
+
+.appHeaderSection2 {
     grid-area: s2;
     display: flex;
     justify-content: center;
     grid-gap: 8px;
 
 }
-.appHeaderSection3{
+
+.appHeaderSection3 {
     grid-area: s3;
     display: flex;
     justify-content: center;
@@ -39,14 +41,13 @@
 
 }
 
-.appHeaderIcon{
+.appHeaderIcon {
     display: flex;
     justify-content: center;
     align-items: center;
     grid-gap: 8px;
 
     font-size: 16px;
-
 
 
     width: 178px;
@@ -61,24 +62,13 @@
     line-height: 24px;
     /* identical to box height, or 150% */
 
-    display: flex;
-    align-items: center;
-
-
 
 }
 
 
-.child
-{
+.child {
 
 }
-
-
-
-
-
-
 
 
 /*.appHeader img {*/

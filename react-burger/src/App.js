@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import AppHeader from "./components/appHeader/appHeader";
 import BurgerConstructor from "./components/burgerConstructor/burgerConstructor";
 import BurgerIngredients from "./components/burgerIngredients/burgerIngredients";

@@ -24,7 +24,6 @@ import styles from './burgerComponent.module.css'
 
 function BurgerComponent(props) {
 
-
     let component = props.component.map(el => (
         <div key={el._id} className={styles.component}>
             <div className={styles.componentImage}><img src={el.image} alt={''}/></div>
@@ -34,9 +33,7 @@ function BurgerComponent(props) {
 
         </div>
 
-
     ))
-
 
     return (
         <div className={styles.componentMain}>

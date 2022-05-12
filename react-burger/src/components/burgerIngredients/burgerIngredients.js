@@ -2,24 +2,10 @@ import React from 'react';
 import styles from './burgerIngredients.module.css'
 
 import {
-    Logo,
-    BurgerIcon,
-    CloseIcon,
-    CheckMarkIcon,
     CurrencyIcon,
     DragIcon,
-    EditIcon,
-    HideIcon,
-    InfoIcon,
-    ListIcon,
     LockIcon,
-    LogoutIcon,
-    ProfileIcon,
-    ShowIcon,
     DeleteIcon,
-    ArrowUpIcon,
-    ArrowDownIcon,
-    MenuIcon
 } from '@ya.praktikum/react-developer-burger-ui-components'
 
 function BurgerIngredients(props) {
@@ -92,7 +78,6 @@ function BurgerIngredients(props) {
                     <div className={styles.b}>
                         <button className={styles.but}><span className={styles.txtBut}>Оформить заказ</span></button>
                     </div>
-
 
 
                 </div>
