@@ -8,9 +8,14 @@ import {
 } from '@ya.praktikum/react-developer-burger-ui-components'
 
 
-function AppHeader() {
+function AppHeader(props) {
+
+
+
+
+
     return (
-        <div className={styles.appHeader}>
+        <header className={styles.appHeader}>
             <div className={styles.appHeaderSection1}>
                 <div className={styles.appHeaderIcon}><BurgerIcon type={'primary'}/>Конструктор</div>
                 <div className={styles.appHeaderIcon}><ListIcon type={'secondary'}/>Лента заказов</div>
@@ -22,7 +27,7 @@ function AppHeader() {
                 <div className={styles.appHeaderIcon}><ProfileIcon type={'secondary'}/> Личный кабинет</div>
 
             </div>
-        </div>
+        </header>
     )
 
 }

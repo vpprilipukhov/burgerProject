@@ -1,87 +1,63 @@
 import React from 'react';
 import styles from './burgerIngredients.module.css'
-
-import {
-    CurrencyIcon,
-    DragIcon,
-    LockIcon,
-    DeleteIcon,
-} from '@ya.praktikum/react-developer-burger-ui-components'
+import BurgerIngSub from "./burgerIngSub";
 
 function BurgerIngredients(props) {
 
-    let choiceBunTop = props.choice.filter(el => el.type === "bun").map(el => (
+    const handelStateChoice = (e) => {
+        props.onChange(e)
+    }
 
-        <div key={el._id} className={styles.choiceComponent}>
-            <div className={styles.dragIcon}><DragIcon type={'primary'}/></div>
-            <div className={styles.choiceComponentInnerTop}>
-                <div className={styles.choiceComponentImage}><img src={el.image} alt={''}
-                                                                  className={styles.choiceComponentImageImage}/></div>
-                <div className={styles.choiceComponentText}>{el.name}</div>
-                <div className={styles.choiceComponentPrice}>{el.price} <CurrencyIcon type={'primary'}/></div>
-                <div className={styles.choiceComponentDell}><LockIcon type={'secondary'}/></div>
-            </div>
+    const getIdIngredients = (e) => {
+        props.getIdIngredients(e)
+    }
 
 
-        </div>
-    ))
+    const buns = props.component.filter(e => e.type === 'bun')
+    const main = props.component.filter(e => e.type === 'main')
+    const sauce = props.component.filter(e => e.type === 'sauce')
 
-    let choiceBunBot = props.choice.filter(el => el.type === "bun").map(el => (
-
-        <div key={el._id} className={styles.choiceComponent}>
-            <div className={styles.dragIcon}><DragIcon type={'primary'}/></div>
-            <div className={styles.choiceComponentInnerBot}>
-                <div className={styles.choiceComponentImage}><img src={el.image} alt={''}
-                                                                  className={styles.choiceComponentImageImage}/></div>
-                <div className={styles.choiceComponentText}>{el.name}</div>
-                <div className={styles.choiceComponentPrice}>{el.price} <CurrencyIcon type={'primary'}/></div>
-                <div className={styles.choiceComponentDell}><LockIcon type={'secondary'}/></div>
-            </div>
-
-
-        </div>
-    ))
-
-
-    let choice = props.choice.filter(el => el.type !== "bun").map(el => (
-
-        <div key={el._id} className={styles.choiceComponent}>
-            <div className={styles.dragIcon}><DragIcon type={'primary'}/></div>
-            <div className={styles.choiceComponentInner}>
-                <div className={styles.choiceComponentImage}><img src={el.image} alt={''}
-                                                                  className={styles.choiceComponentImageImage}/></div>
-                <div className={styles.choiceComponentText}>{el.name}</div>
-                <div className={styles.choiceComponentPrice}>{el.price} <CurrencyIcon type={'primary'}/></div>
-                <div className={styles.choiceComponentDell}><DeleteIcon type={'primary'}/></div>
-            </div>
-
-
-        </div>
-
-
-    ))
 
     return (
         <div className={styles.burgerIngredients}>
-            {choiceBunTop}
-            <div className={styles.choiceComponentFilling}>
-                {choice}
+            <div className={styles.header}> Собери бургеры</div>
+
+            <div className={styles.miniMenu}>
+                <div> Булки</div>
+                <div> Соусы</div>
+                <div> Начинки</div>
             </div>
-            {choiceBunBot}
-
-            <div className={styles.sum}>
-                <div className={styles.sumContainer}>
-                    <div className={styles.sum2}>
-                        <div className={styles.sumNumber}>610</div>
-                        <div className={styles.iconSum}><CurrencyIcon type={'primary'}/></div>
+            <div className={styles.blockComponent}>
+                <div>
+                    <div className={styles.textChoice}>
+                        Булки
                     </div>
-                    <div className={styles.b}>
-                        <button className={styles.but}><span className={styles.txtBut}>Оформить заказ</span></button>
+                    <div>
+                        <BurgerIngSub getIdIngredients={getIdIngredients} onChange={handelStateChoice}
+                                      component={buns}/>
                     </div>
-
+                </div>
+                <div>
+                    <div className={styles.textChoice}>
+                        Соусы
+                    </div>
+                    <div>
+                        <BurgerIngSub getIdIngredients={getIdIngredients} onChange={handelStateChoice}
+                                      component={sauce}/>
+                    </div>
+                </div>
+                <div>
+                    <div className={styles.textChoice}>
+                        Начинки
+                    </div>
+                    <div>
+                        <BurgerIngSub getIdIngredients={getIdIngredients} onChange={handelStateChoice}
+                                      component={main}/>
+                    </div>
 
                 </div>
             </div>
+
 
         </div>
     )
