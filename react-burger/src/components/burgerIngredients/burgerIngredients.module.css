@@ -1,310 +1,22 @@
 .burgerIngredients {
-    grid-area: c;
-
+    grid-area: n;
     display: grid;
-    align-content: start;
-    justify-content: start;
-
 
     grid-template-columns: 600px;
-    height: 814px;
-
-
-
-
-    grid-row-gap: 16px;
-    padding-left: 16px;
-    padding-top: 100px;
-
-
-}
-
-.choiceComponentFilling {
-
-
-    display: grid;
-    align-content: start;
-    justify-content: start;
-    grid-row-gap: 16px;
-
-    height: 460px;
-
-
-
-    overflow-x: hidden;
-    overflow-y: auto;
-
-
-}
-
-
-.choiceComponent {
-    display: grid;
-    align-content: center;
-
-    grid-template-columns: 20px 526px;
-    column-gap: 12px;
-    /*центровка сбивается?*/
-
-
-    width: 550px;
-    height: 80px;
-
-
-}
-
-
-.dragIcon {
-    display: grid;
-
-    align-content: center;
-    justify-content: start;
-    justify-self: start;
-
-
-    height: 80px;
-
-
-
-}
-
-
-.choiceComponentInner {
-    display: grid;
-    height: 80px;
-
-    grid-template-columns: 80px 254px 100px 20px;
-
-    align-content: center;
-
-    justify-content: start;
-
-
-    border-radius: 30px;
-    background: #1C1C1C;
-    grid-column-gap: 5px;
-
-
-}
-
-
-.choiceComponentImage {
-    display: grid;
-    align-content: start;
-    justify-content: start;
-
-
-    width: 80px;
-    height: 48px;
-
-
-
-}
-
-.choiceComponentImageImage {
-    width: 110%;
-    height: 110%;
-
-}
-
-.choiceComponentPrice {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4px;
-
-    align-content: center;
-    justify-content: center;
-
-
-    width: 80px;
-    height: 48px;
-
-
-    font-size: 16px;
-
-}
-
-
-.choiceComponentText {
-    display: grid;
-    align-content: center;
-    justify-content: start;
-    width: 254px;
-    height: 48px;
-
-
-
-
-    font-size: 16px;
-}
-
-.choiceComponentDell {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-
-    width: 22px;
-
-
-}
-
-
-.choiceComponentInnerTop {
-    display: grid;
-    height: 80px;
-
-    grid-template-columns: 80px 254px 100px 20px;
-
-    align-content: center;
-
-    justify-content: start;
-
-
-    border-radius: 60px 60px 30px 30px;
-    background: #1C1C1C;
-    grid-column-gap: 5px;
-
-
-}
-
-.choiceComponentInnerBot {
-    display: grid;
-    height: 80px;
-
-    grid-template-columns: 80px 254px 100px 20px;
-
-    align-content: center;
-
-    justify-content: start;
-
-
-    border-radius: 30px 30px 60px 60px;
-    background: #1C1C1C;
-    grid-column-gap: 5px;
-
-
-}
-
-
-.sum {
-    display: grid;
-    width: 550px;
-    height: 64px;
-    padding-top: 40px;
+    height: 912px;
 
     justify-content: end;
-    align-content: center;
-
-
 
 
 }
 
-.sumContainer {
-
-    display: grid;
-    width: 350px;
-    height: 64px;
-
-    grid-template-columns: 1fr 1fr;
-
-    grid-column-gap: 40px;
-
-    justify-content: end;
-    align-content: center;
-
-
-
-
-
-
-
-
-
-}
-
-
-.sum2 {
-    display: flex;
-    justify-content: start;
-    align-self: baseline;
-
-
-    height: 64px;
-}
-
-.sumNumber {
-    position: center;
-    width: 75px;
-    left: calc(50% - 75px / 2 - 22px);
-    top: 21.88%;
-    bottom: 21.88%;
-
-
-    font-family: 'Iceland';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 36px;
-    /* identical to box height, or 75% */
+.miniMenu {
 
     display: flex;
-    align-items: center;
-    text-align: right;
+    justify-content: space-evenly;
 
-    /* text/primary-light (standart text) */
-
-    color: #F2F2F3;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 14px;
-
-
-}
-
-.iconSum {
-    display: flex;
-    align-items: center;
-
-
-    left: 4.17%;
-    right: 4.17%;
-    top: 4.17%;
-    bottom: 4.17%;
-    transform: scale(1.8,1.8);
-
-
-
-
-}
-
-.b {
-    display: grid;
-
-
-    height: 64px;
-    width: 215px;
-
-
-}
-
-
-.txtBut{
-    /* Text */
-
-
-    position: static;
-    width: 135px;
-    height: 24px;
-    left: 40px;
-    top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 
     /* desktop/text */
 
@@ -315,58 +27,69 @@
     line-height: 24px;
     /* identical to box height, or 150% */
 
+
+}
+
+.header {
     display: flex;
-    align-items: center;
-    text-align: center;
+
+    font-size: 36px;
+
+
+    width: 600px;
+    height: 40px;
+
+    margin-top: 40px;
+
+
+    /* Соберите бургер */
+
+
+
+    /* desktop/display large */
+
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height, or 111% */
+
+
 
     /* text/primary-light (standart text) */
 
     color: #F2F2F3;
 
 
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
-.but {/* Base */
+.blockComponent {
 
 
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    overflow-x: hidden;
+    overflow-y: auto;
 
 
+}
 
+.textChoice {
+    /* desktop/display small */
 
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 
+}
 
-    padding: 20px 20px;
-
-    position: static;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    /* button/normal */
-
-    background: linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);
-    border-radius: 64px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 0px;}
-
-
-
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #143861;
+}
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
@@ -378,3 +101,34 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: #253861;
 }
+
+
+/*!* Стрелки *!*/
+
+/*::-webkit-scrollbar-button:vertical:start:decrement {*/
+/*    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);*/
+/*    background-color: #f6f8f4;*/
+/*}*/
+
+/*::-webkit-scrollbar-button:vertical:end:increment {*/
+/*    background: linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);*/
+/*    background-color: #f6f8f4;*/
+/*}*/
+
+/*::-webkit-scrollbar-button:horizontal:start:decrement {*/
+/*    background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);*/
+/*    background-color: #f6f8f4;*/
+/*}*/
+
+/*::-webkit-scrollbar-button:horizontal:end:increment {*/
+/*    background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),*/
+/*    linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);*/
+/*    background-color: #f6f8f4;*/
+/*}*/
